@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Mi portofolio</title>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+
+  <div class="container">
+    <section class="tarjeta">
+
+      <section class="slider_banner">
+        <div class="banner" id = "banner">
+          <img class = "slide active" src="img/img4.jpeg" alt="">
+          <img class = "slide" src="img/img2.jpeg" alt="">
+          <img class = "slide" src="img/img3.jpeg" alt="">
+          <img class = "slide" src="img/img1.jpeg" alt="">
+        </div>
+        <a href="#" id = "banner-prev" class = "flecha-banner anterior"><span class = "fa fa-chevron-left"></span></a>
+        <a href="#" id = "banner-next" class = "flecha-banner siguiente"><span class = "fa fa-chevron-right"></span></a>
+      </section>
+
+      <section class="slider_info">
+        <a href="#" id = "info-prev" class = "flecha-info anterior"><span class = "fa fa-chevron-left"></span></a>
+        <a href="#" id = "info-next" class = "flecha-info siguiente"><span class = "fa fa-chevron-right"></span></a>
+        <section id="informacion" class="informacion">
+          <article id="info">
+            <div class="slide active">
+              <h1 class="nombre">David Lopez</h1>
+              <p class = "trabajo">Desarrollo web</p>
+              <p class = "pais"><img src="img/bandera.png" alt=""> España</p>
+            </div>
+            <div class="slide">
+              <h2 class="subtitulo">Buscas un freelancer?</h2>
+              <p class = "texto">
+                Si es así , este es tu sitio!<br>Por que todo los negocios deberían tener una buena página web
+              </p>
+            </div>
+            <div class="slide">
+              <h2 class="subtitulo">Que cómo lo hago?</h2>
+              <p class = "texto">Pues muy fácil , usando las últimas teconologías para conseguir diseños frescos y sencillos</p>
+              <p class = "texto">Mándame un mensaje para hablar conmigo o mira mis trabajos en mis redes sociales , estaré encantado de ayudarte</p>
+            </div>
+
+          </article>
+          <div class="botones" id="boton"></div>
+        </section>
+      </section>
+
+      <section class="redes_sociales">
+        <a href="#" class = "facebook"><span class = "fa fa-facebook"></span></a>
+        <a href="#" class = "google"><span class = "fa fa-camera-retro"></span></a>
+        <a href="#" class = "mail" data-toggle = "modal" data-target = "#exampleModal"><span class = "fa fa-envelope"></span></a>
+      </section>
+
+    </section>
+    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Send me a message</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div class="form-group">
+          <label for="name">Direccion de email </label>
+          <input type="email" class="form-control" id="name" aria-describedby="emailHelp" placeholder="Enter email">
+        </div>
+        <div class="form-group">
+          <label for="msg">Tu mensaje</label>
+          <textarea class="form-control" id="msg" rows="3"></textarea>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-success" id = "sendBtn">Enviar</button>
+        <button type="button" class="btn btn-red" data-dismiss="modal">Cerrar</button>
+      </div>
+    </div>
+  </div>
+</div>
+  </div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="js/main.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/4.9.1/firebase.js"></script>
+  <script>
+    // Initialize Firebase
+    var config = {
+      apiKey: "AIzaSyARgrZDqAFbJQq188nhyBvYHTzGsKvviSk",
+      authDomain: "emails-d4d6c.firebaseapp.com",
+      databaseURL: "https://emails-d4d6c.firebaseio.com",
+      projectId: "emails-d4d6c",
+      storageBucket: "emails-d4d6c.appspot.com",
+      messagingSenderId: "369607373318"
+    };
+    firebase.initializeApp(config);
+  </script>
+</body>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+<script>
+$('#myModal').on('shown.bs.modal', function () {
+  $('#myInput').trigger('focus')
+})
+</script>
+</html>
